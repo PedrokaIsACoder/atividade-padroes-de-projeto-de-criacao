@@ -15,9 +15,17 @@ public class Main {
 
         System.out.println();
 
-        // Configure a estratégia de rota de ônibus
+        // Estratégia 2: ônibus
+        System.out.println("=== Opção 2 ===");
+        app.setEstrategia(new RotaDeOnibus());
+        app.calcularRota(origem, destino, distancia);
 
-        //Configure a estratégia de rota a pé
+        System.out.println();
+
+        // Estratégia 3: a pé
+        System.out.println("=== Opção 3 ===");
+        app.setEstrategia(new RotaAPe());
+        app.calcularRota(origem, destino, distancia);
        
     }
 }
